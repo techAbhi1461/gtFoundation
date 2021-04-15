@@ -500,7 +500,13 @@ footer li{
 
     /* All css for Testimonial section ends here */
 
-    /* All css for footer section ends here */
+    /* All css for gift section starts here */
+    section.gift{
+        padding: 5rem 0.5rem;
+    }
+/* All css for gift section ends here */
+
+    /* All css for footer section starts here */
     footer{
         flex-direction: column;
         text-align: center;
