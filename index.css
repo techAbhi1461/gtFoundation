@@ -1,0 +1,517 @@
+/* Css Variables for colors */
+:root {
+    --primary-color: #1B1F21;
+    --secondary-color: #EDB348;
+  }
+
+img{
+    height: 100%;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+/* All Css for Header starts here */
+header{
+    background: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    
+}
+
+header nav ul li:first-child, header nav ul li:nth-child(2){
+    padding-right: 6rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 0.5rem;
+    transition: border-bottom 0.1s ease-in-out;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+header nav span{
+    display: none;
+}
+
+header nav span i{
+    color: white;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+
+header nav ul li a:hover{
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) 4px solid;
+}
+/* All Css for Header ends here */
+
+/* All Css for side-menu starts here */
+#side-menu{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 4rem;
+    transition: 0.5s; 
+}
+
+#side-menu li{
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#side-menu li:hover{
+    background: var(--secondary-color);
+    
+}
+
+#side-menu li:hover a{
+    color: var(--primary-color);
+}
+
+#side-menu a{
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+}
+
+#side-menu .btn-close{
+    position: absolute;
+    top: 0;
+    right: 1.3rem;
+    font-size: 2.5rem;
+
+}
+
+#side-menu .btn-close:hover{
+    background: var(--secondary-color);
+}
+
+#main{
+    transition: margin-left 0.5s;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* All Css for side-menu ends here */
+
+/* All Css for Hero section starts here */
+section.hero{
+background: url("./img/gs-hero-image-1.jpeg") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+section.hero .hero-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: black;
+    opacity: 0.8; */
+}
+
+section.hero .hero-text h1{
+    font-size: 7rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+section.hero .hero-text p{
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+section.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+section.hero *{
+    z-index: 10;
+}
+/* All Css for Hero section ends here */
+
+/* All Css for Testimonial section start here */
+section.testimonial{
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 0 2rem 0;
+}
+
+section.testimonial .section-heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+}
+
+section.testimonial article{
+    margin: 4rem;
+    background: #F4F4F4;
+    padding: 2.5rem;
+    
+}
+
+blockquote{
+    display: flex;
+}
+
+section.testimonial article .blockquote-text{
+    width: 60%;
+}
+
+section.testimonial article .blockquote-text h1{
+    font-size: 8rem;
+    color: var(--secondary-color);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+section.testimonial article .blockquote-text p{
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1.4rem;
+}
+
+section.testimonial article .blockquote-text h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+section.testimonial .blockquote-image{
+    position: relative;
+}
+
+section.testimonial .blockquote-image .testimonial-image{
+    padding: 0 1.5rem;
+}
+
+section.testimonial .blockquote-image .testimonial-image img{
+    z-index: 1;
+    height: 100%;
+    width: 100%
+}
+
+/* All Css for Testimonial section ends here */
+
+/* All Css for Stories section start here */
+section.stories{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 0 7rem 0;
+}
+
+section.stories .section-heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+}
+
+section.stories .stories-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+}
+
+section.stories .stories-grid .story{
+    border: 1px solid #ccc;
+}
+
+section.stories .stories-grid .story:hover{
+    box-shadow: 3px 3px 9px #ccc;
+}
+
+
+
+section.stories .stories-grid .story .story-image-1{
+    background: url("./img/stories/story-1.jpeg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background: red; */
+    height: 300px;
+    
+}
+
+section.stories .stories-grid .story .story-image-2{
+    background: url("./img/stories/story-2.png") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+section.stories .stories-grid .story .story-image-3{
+    background: url("./img/stories/story-3.png") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+section.stories .stories-grid .story .story-image-4{
+    background: url("./img/stories/story-4.png") no-repeat center top 0px; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+section.stories .stories-grid .story .story-image-5{
+    background: url("./img/stories/story-5.png") no-repeat center top 0px; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+section.stories .stories-grid .story .story-image-6{
+    background: url("./img/stories/story-6.png") no-repeat center top 0px; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+section.stories .stories-grid .story .story-text{
+    font-size: 1.9rem;
+    padding: 2.5rem 2rem;
+    
+}
+
+section.stories .stories-grid .story .story-text button{
+    display: inline-block;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    font-weight: 700px;
+    background: var(--secondary-color);
+    transition: background 0.5s ease-in-out;
+}
+
+section.stories .stories-grid .story .story-text button:hover{
+    color: var(--secondary-color);
+    background: var(--primary-color);
+}
+
+section.stories .stories-grid .story .story-text button:hover a{
+    color: var(--secondary-color);
+}
+
+section.stories .stories-grid .story .story-text button a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.all-stories{
+    width: 100%;
+    text-align: center;
+    padding-top: 3.5rem;
+}
+
+.all-stories button{
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+}
+
+.all-stories button:hover{   
+    background: var(--primary-color);
+}
+
+.all-stories button:hover a{   
+    color: var(--secondary-color);
+}
+
+.all-stories button:hover i{   
+    margin-left: 0.5rem;
+}
+
+.all-stories button a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* All Css for Stories section ends here */
+
+/* All Css for gift section starts here */
+section.gift{
+    padding: 5rem 0;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+section.gift h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+section.gift p{
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+section.gift button{
+    margin-top: 1.5rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    transition: all 0.5s ease-in-out;
+}
+
+section.gift button:hover{
+    background: #fff;
+    color: var(--primary-color);
+}
+
+section.gift button:hover i{
+    margin-left: 0.5rem;
+}
+/* All Css for gift section ends here */
+
+/* All Css for footer starts here */
+footer{
+    background: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+footer li{
+    margin-bottom: 0.5rem;
+}
+
+/* All Css for footer ends here */
+
+
+/* Media Queries start here */
+@media(max-width:668px){
+
+    /* All css for header starts here */
+    header nav ul li{
+        display: none;
+    }
+    header nav span{
+        display: block;
+    }
+    /* All css for header ends here */
+
+    /* All css for Hero section starts here */
+    section.hero .hero-text{
+        padding: 0 1.5rem;
+    }
+
+    section.hero .hero-text h1{
+        font-size: 3.5rem;
+    }
+    section.hero .hero-text p{
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    /* All css for Hero section ends here */
+
+    /* All css for Testimonial section starts here */
+    section.testimonial{
+        width: 90%;
+        
+    }
+
+    section.testimonial article{
+        margin: 4rem 0;
+    }
+
+    blockquote{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    section.testimonial article .blockquote-text{
+        width: 100%;
+    }
+    
+    section.testimonial article .blockquote-text p{
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    section.testimonial article .blockquote-text h3{
+        margin-bottom: 1.5rem;
+    }   
+
+    /* All css for Testimonial section ends here */
+
+    /* All css for footer section ends here */
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .logo{
+        margin-bottom: 1rem;
+    }
+    /* All css for footer section ends here */
+
+}
+
+/* Media Queries end here */
+
+
+
+
+
